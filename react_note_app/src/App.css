@@ -1,0 +1,161 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 100vh;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 15px;
+}
+
+.header input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    max-width: 300px;
+}
+
+.header button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: blueviolet;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .notes-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.notes-list {
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.note {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+    white-space: pre-wrap;
+}
+
+.note.new {
+    background-color: #67d7cc;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    background-color: #67d7cc; 
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.save {
+   background-color: #e1e1e1; 
+   border: none;
+   border-radius: 15px;
+   padding: 5px 10px 5px 10px;
+}
+
+.save:hover {
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.note:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.note-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+    .notes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .note {
+        padding: 10px;
+        min-height: 150px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.note {
+    background-color: #67d7cc;
+    transition: background-color 0.3s ease;
+}
+
+body.dark .note {
+    background-color: #67d7cc;
+}
+
+
+
+@media (max-width: 480px) {
+    .notes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .note {
+        padding: 10px;
+        min-height: 150px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}
